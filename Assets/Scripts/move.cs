@@ -17,12 +17,15 @@ public class move : MonoBehaviour {
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.position += Vector3.left * speed * Time.deltaTime;
+			animator.StopPlayback ();
+			UpdateState("move_character_left");
 		}
 		else
 			if (Input.GetKey(KeyCode.RightArrow))
 			{
 				transform.position += Vector3.right * speed * Time.deltaTime;
-				UpdateState("move_character");
+				animator.StopPlayback ();
+				UpdateState("move_character_right");
 			}
 			else
 				UpdateState("idle_character");
@@ -33,4 +36,5 @@ public class move : MonoBehaviour {
 			animator.Play(state); // Ejecutar la animación pasada como parámetro
 		}
 	}
+		
 }
