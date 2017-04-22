@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class move : MonoBehaviour {
 
-	public float speed = 1.5f;
+	public float speed = 2.5f;
 	private Animator animator;
+	bool collision = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,9 @@ public class move : MonoBehaviour {
 			animator.StopPlayback ();
 			UpdateState ("move_character_left");
 		} else if (Input.GetKey (KeyCode.RightArrow)) { // RIGHT
+			if (collision) { // Si estamos en el borde del escenario, para moverse
+				speed = 2.5f;
+			}
 			transform.position += Vector3.right * speed * Time.deltaTime;
 			animator.StopPlayback ();
 			UpdateState ("move_character_right");
@@ -38,9 +42,9 @@ public class move : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log("Colisión con el límite del escenario");
 		if (other.gameObject.tag == "brick") {
-			Debug.Log("Colisión con el límite del escenario");
+			collision = true;
 			speed = 0;
 		}
 	}
-		
+
 }
