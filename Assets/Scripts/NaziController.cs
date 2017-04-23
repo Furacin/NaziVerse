@@ -18,4 +18,5 @@ public class NaziController : MonoBehaviour {
 	void Update () {
 		
 	}
+		
 }

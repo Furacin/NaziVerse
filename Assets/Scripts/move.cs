@@ -48,6 +48,7 @@ public class move : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Z)) {
 			Vector3 position = transform.position;
 			position.y -= 0.4f;
+			position.x += 0.65f;
 			Instantiate(bulletPrefab,position,Quaternion.identity);
 		}
 	}
