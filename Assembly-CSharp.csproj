@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\NaziGenerator.cs" />
      <Compile Include="Assets\Scripts\checkground.cs" />
      <Compile Include="Assets\Scripts\move.cs" />
+     <Compile Include="Assets\camera.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

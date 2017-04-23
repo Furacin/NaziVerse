@@ -45,7 +45,7 @@ public class move : MonoBehaviour {
 			jump = true;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Z)) {
+		if (Input.GetKeyDown (KeyCode.Space)) {
 			Vector3 position = transform.position;
 			position.y -= 0.4f;
 			position.x += 0.65f;
@@ -78,16 +78,12 @@ public class move : MonoBehaviour {
 		if (other.gameObject.tag == "ground") {
 			grounded = true;
 		}
-		if (other.gameObject.tag == "baril")
-			grounded = true;
 	}
 
 	void OnCollisionExit2D(Collision2D other) {
 		if (other.gameObject.tag == "ground") {
 			grounded = false;
 		}
-		if (other.gameObject.tag == "baril" && transform.position.y>-1.5)
-			grounded = true;
 	}
 		
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class NaziGenerator : MonoBehaviour {
 
 	public GameObject naziPrefab;
-	public float generatorTime = 1.75f;
+	public float generatorTime = 0.2f;
 
 	// Use this for initialization
 	void Start () {
