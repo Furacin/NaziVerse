@@ -1,9 +1,32 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\move.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\camera.cs">
     <Files>
-      <File FileName="Assets\Scripts\move.cs" Line="34" Column="4" />
+      <File FileName="Assets\Scripts\move.cs" Line="48" Column="38" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="11" Column="2" />
+      <File FileName="Assets\Scripts\NaziGenerator.cs" Line="8" Column="34" />
+      <File FileName="Assets\Scripts\MenuScript.cs" Line="4" Column="35" />
+      <File FileName="Assets\Scripts\NaziController.cs" Line="21" Column="3" />
+      <File FileName="Assets\NaziDead.cs" Line="26" Column="1" />
+      <File FileName="Assets\camera.cs" Line="18" Column="4" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NaziVerse" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True" />
+              <Node name="camera.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="NaziVerse" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
