@@ -46,14 +46,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameController.cs" />
-     <Compile Include="Assets\GunController.cs" />
-     <Compile Include="Assets\MenuScript.cs" />
-     <Compile Include="Assets\NaziController.cs" />
-     <Compile Include="Assets\NaziGenerator.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GunController.cs" />
+     <Compile Include="Assets\Scripts\MenuScript.cs" />
+     <Compile Include="Assets\Scripts\NaziController.cs" />
+     <Compile Include="Assets\Scripts\NaziGenerator.cs" />
+     <Compile Include="Assets\Scripts\checkground.cs" />
      <Compile Include="Assets\Scripts\move.cs" />
-     <Compile Include="Assets\checkground.cs" />
-     <Compile Include="Assets\script.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameState {Init, Playing};
+
 public class GameController : MonoBehaviour {
 
-	public enum GameState {Idle, Playing};
+	public GameState gameState = GameState.Init;
+	public GameObject naziGenerator;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +16,9 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (gameState == GameState.Init) {
+			gameState = GameState.Playing;
+			naziGenerator.SendMessage ("StartGenerator");
+		}
 	}
 }
