@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F200ACC7-D327-77F1-B699-2B4B98252451}</ProjectGuid>
+    <ProjectGuid>{1821EA19-A690-E498-3126-D2318F2E0B56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,10 +46,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\GunController.cs" />
+     <Compile Include="Assets\MenuScript.cs" />
      <Compile Include="Assets\NaziController.cs" />
+     <Compile Include="Assets\NaziGenerator.cs" />
      <Compile Include="Assets\Scripts\move.cs" />
      <Compile Include="Assets\checkground.cs" />
+     <Compile Include="Assets\script.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
