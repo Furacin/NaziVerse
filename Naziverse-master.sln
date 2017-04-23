@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naziverse-master", "Assembly-CSharp.csproj", "{F200ACC7-D327-77F1-B699-2B4B98252451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F200ACC7-D327-77F1-B699-2B4B98252451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F200ACC7-D327-77F1-B699-2B4B98252451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F200ACC7-D327-77F1-B699-2B4B98252451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F200ACC7-D327-77F1-B699-2B4B98252451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

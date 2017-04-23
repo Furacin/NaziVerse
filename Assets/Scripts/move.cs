@@ -19,18 +19,18 @@ public class move : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
 			transform.position += Vector3.left * speed * Time.deltaTime;
 			animator.StopPlayback ();
-			UpdateState ("move_character_left");
+			UpdateState ("move_character_left_gun");
 		} else if (Input.GetKey (KeyCode.RightArrow)) { // RIGHT
 			if (collision) { // Si estamos en el borde del escenario, para moverse
 				speed = 2.5f;
 			}
 			transform.position += Vector3.right * speed * Time.deltaTime;
 			animator.StopPlayback ();
-			UpdateState ("move_character_right");
+			UpdateState ("move_character_right_gun");
 		} else if (Input.GetKey (KeyCode.Z)) { // JUMP (Z)
 			//transform.position.y
 		} else
-			UpdateState("idle_character");
+			UpdateState("idle_gun_character");
 	}
 
 	public void UpdateState(string state = null) {
