@@ -9,17 +9,21 @@ public class move : MonoBehaviour {
 	bool collision = false;
 	public float jumpPower = 2.5f;
 	private bool jump;
+	bool grounded = false;
 
 	private Rigidbody2D rb2d;
 
 	// Use this for initialization
 	void Start () {
+		
 		animator = GetComponent<Animator> (); // Obtenemos la componente animator del objeto
 		rb2d = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		animator.SetBool("Grounded",grounded);
 
 		if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
 			transform.position += Vector3.left * speed * Time.deltaTime;
@@ -35,9 +39,8 @@ public class move : MonoBehaviour {
 		} else
 			UpdateState("idle_gun_character");
 
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) {
 			jump = true;
-
 		}
 	}
 
@@ -55,11 +58,23 @@ public class move : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("Colisión con el límite del escenario");
+		Debug.Log ("Colisión con el límite del escenario");
 		if (other.gameObject.tag == "brick") {
 			collision = true;
 			speed = 0;
 		}
 	}
 
+	void OnCollisionStay2D(Collision2D other) {
+		if (other.gameObject.tag == "ground") {
+			grounded = true;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other) {
+		if (other.gameObject.tag == "ground") {
+			grounded = false;
+		}
+	}
+		
 }
