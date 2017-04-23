@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class move : MonoBehaviour {
 
+	public GameObject bulletPrefab;
+
 	public float speed = 2.5f;
 	private Animator animator;
 	bool collision = false;
@@ -39,8 +41,14 @@ public class move : MonoBehaviour {
 		} else
 			UpdateState("idle_gun_character");
 
-		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) {
+		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) { // SALTO
 			jump = true;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Z)) {
+			Vector3 position = transform.position;
+			position.y -= 0.4f;
+			Instantiate(bulletPrefab,position,Quaternion.identity);
 		}
 	}
 
