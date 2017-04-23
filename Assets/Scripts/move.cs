@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Direccion {Izquierda, Derecha};
 
@@ -34,8 +35,9 @@ public class move : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
 			if (collision_fin) {
-				speed = 2.5f;
-				collision_init = false;
+				//speed = 2.5f;
+				//collision_init = false;
+
 			}
 			direccion = Direccion.Izquierda;
 			transform.position += Vector3.left * speed * Time.deltaTime;
@@ -85,8 +87,9 @@ public class move : MonoBehaviour {
 		}
 		// End of street
 		if (other.gameObject.tag == "brick2") {
-			collision_fin = true;
-			speed = 0;
+			//collision_fin = true;
+			//speed = 0;
+			Final_Scene();
 		}
 	}
 
@@ -100,6 +103,10 @@ public class move : MonoBehaviour {
 		if (other.gameObject.tag == "ground") {
 			grounded = false;
 		}
+	}
+
+	void Final_Scene() {
+		SceneManager.LoadScene ("fin_level1");
 	}
 		
 }
