@@ -37,8 +37,9 @@ public class move : MonoBehaviour {
 	void Update () {
 
 		animator.SetBool("Grounded",grounded);
-
-		if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
+		if (Input.GetKey (KeyCode.DownArrow)) { // DUCK
+			animator.Play("duck");
+		} else if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
 			//InvokeRepeating ("PlayWalk",0.01f,1f);
 			if (collision_fin) {
 				//speed = 2.5f;
@@ -58,6 +59,7 @@ public class move : MonoBehaviour {
 			UpdateState ("move_character_right_gun");
 		} else
 			UpdateState("idle_gun_character");
+
 
 		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) { // JUMP
 			audioPlayer.clip = jumpClip;
