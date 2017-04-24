@@ -26,17 +26,25 @@ public class GameController : MonoBehaviour {
 			naziGenerator.SendMessage ("StartGenerator");
 		}
 
+		if (character != null && gameState == GameState.Playing && character.transform.position.x > 5f) {
+			Destroy (naziGenerator);
+		}
+
 		// Segunda Oleada
-		if (gameState == GameState.Playing && character.transform.position.x > 5f) {
+		/*if (gameState == GameState.Playing && character.transform.position.x > 5f) {
 			naziGenerator.SendMessage ("CancelGenerator");
 			//Destroy(naziGenerator);
 			Debug.Log ("SEGUNDA OLEADA");
-			naziGenerator2.SendMessage ("StartGenerator");
+			Vector3 position = naziGenerator.transform.position;
+
+			naziGenerator.transform.position = position;
+			//naziGenerator.transform.position.x += 34f;
+			naziGenerator.SendMessage ("StartGenerator");
 		}
 
 		// Tercera Oleada
 		if (gameState == GameState.Playing && contador_nazis == 30) {
 			//naziGenerator3.SendMessage ("StartGenerator");
-		}
+		}*/
 	}
 }

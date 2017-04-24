@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterDead : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class CharacterDead : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "nazibullet") {
+			SceneManager.LoadScene ("RestartLevel1");
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 		}
