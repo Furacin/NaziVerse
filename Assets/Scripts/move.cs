@@ -24,6 +24,7 @@ public class move : MonoBehaviour {
 	private AudioSource audioPlayer;
 	public AudioClip shotClip;
 	public AudioClip jumpClip;
+	public AudioClip walkClip;
 
 	// Use this for initialization
 	void Start () {
@@ -38,15 +39,16 @@ public class move : MonoBehaviour {
 		animator.SetBool("Grounded",grounded);
 
 		if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
+			//InvokeRepeating ("PlayWalk",0.01f,1f);
 			if (collision_fin) {
 				//speed = 2.5f;
 				//collision_init = false;
-
 			}
 			direccion = Direccion.Izquierda;
 			transform.position += Vector3.left * speed * Time.deltaTime;
 			UpdateState ("move_character_left_gun");
 		} else if (Input.GetKey (KeyCode.RightArrow)) { // RIGHT
+			//InvokeRepeating ("PlayWalk",0.01f,1f);
 			if (collision_init) {
 				speed = 2.5f;
 				collision_init = false;
@@ -71,6 +73,14 @@ public class move : MonoBehaviour {
 			position.x += 0.65f;
 			Instantiate(bulletPrefab,position,Quaternion.identity);
 		}
+
+		/*if (Input.GetKeyUp (KeyCode.RightArrow)) {
+			audioPlayer.Stop ();
+		}
+
+		if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+			audioPlayer.Stop ();
+		}*/
 
 	}
 
@@ -116,5 +126,10 @@ public class move : MonoBehaviour {
 	void Final_Scene() {
 		SceneManager.LoadScene ("fin_level1");
 	}
+
+	/*void PlayWalk() {
+		audioPlayer.clip = walkClip;
+		audioPlayer.Play();
+	}*/
 		
 }
