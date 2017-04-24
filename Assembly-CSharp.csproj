@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\NaziController.cs" />
      <Compile Include="Assets\Scripts\NaziDead.cs" />
      <Compile Include="Assets\Scripts\NaziGenerator.cs" />
+     <Compile Include="Assets\Scripts\NaziGunController.cs" />
      <Compile Include="Assets\Scripts\camera.cs" />
      <Compile Include="Assets\Scripts\checkground.cs" />
      <Compile Include="Assets\Scripts\move.cs" />
