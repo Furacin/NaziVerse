@@ -5,7 +5,8 @@ using UnityEngine;
 public class GreenNaziGenerator : MonoBehaviour {
 
 	public GameObject greenNaziPrefab;
-	public float generatorTime = 0.5f;
+	public float generatorTime = 1f;
+	public GameObject vegaNaziGunPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +19,20 @@ public class GreenNaziGenerator : MonoBehaviour {
 	}
 
 	void CreateNazi() {
+		Vector3 position = transform.position;
+		position.x += Random.Range (-5f,0f);
 		Instantiate(greenNaziPrefab,transform.position, Quaternion.identity);
 	}
 
 	public void StartGenerator() {
 		InvokeRepeating ("CreateNazi",0f,generatorTime);
+	}
+
+	void CancelGenerator()
+	{
+		CancelInvoke ();
+	}
+	void GunShot(Vector3 position) {
+		Instantiate(vegaNaziGunPrefab,position,Quaternion.identity);
 	}
 }
