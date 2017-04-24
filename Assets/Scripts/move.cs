@@ -73,7 +73,7 @@ public class move : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.Space)) { // SHOT
-			if (name_scene != "fin_level1") {
+			if (name_scene != "fin_level1" && name_scene != "fin_level2") {
 				audioPlayer.clip = shotClip;
 				audioPlayer.Play ();
 				Vector3 position = transform.position;
@@ -116,7 +116,10 @@ public class move : MonoBehaviour {
 		if (other.gameObject.tag == "brick2") {
 			//collision_fin = true;
 			//speed = 0;
-			Final_Scene();
+			if (name_scene == "escena")
+				Final_Scene1 ();
+			else if (name_scene == "level2")
+				Final_Scene2 ();
 		}
 	}
 
@@ -132,8 +135,12 @@ public class move : MonoBehaviour {
 		}
 	}
 
-	void Final_Scene() {
+	void Final_Scene1() {
 		SceneManager.LoadScene ("fin_level1");
+	}
+
+	void Final_Scene2() {
+		SceneManager.LoadScene ("fin_level2");
 	}
 
 	/*void PlayWalk() {
