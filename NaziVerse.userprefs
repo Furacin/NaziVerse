@@ -1,22 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NaziController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CharacterDead.cs">
     <Files>
       <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\NaziGenerator.cs" Line="24" Column="57" />
-      <File FileName="Assets\Scripts\NaziController.cs" Line="18" Column="130" />
-      <File FileName="Assets\Scripts\move.cs" Line="72" Column="4" />
+      <File FileName="Assets\Scripts\NaziController.cs" Line="27" Column="3" />
+      <File FileName="Assets\Scripts\move.cs" Line="47" Column="5" />
       <File FileName="Assets\Scripts\GunController.cs" Line="12" Column="3" />
       <File FileName="Assets\Scripts\NaziGunController.cs" Line="11" Column="17" />
+      <File FileName="Assets\Scripts\NaziDead.cs" Line="18" Column="43" />
+      <File FileName="Assets\CharacterDead.cs" Line="9" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NaziVerse" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="NaziController.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
+              <Node name="CharacterDead.cs" selected="True" />
             </Node>
           </Node>
         </State>

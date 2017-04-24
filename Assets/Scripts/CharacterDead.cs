@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NaziDead : MonoBehaviour {
-	
+public class CharacterDead : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +15,7 @@ public class NaziDead : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "bullet") {
+		if (other.gameObject.tag == "nazibullet") {
 			Destroy(gameObject);
 			Destroy(other.gameObject);
 		}
