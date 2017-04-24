@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NaziGunController : MonoBehaviour {
 
-	public float velocity = 10f;
+	public float velocity = 8f;
 	private Rigidbody2D rb2d;
 
 	// Use this for initialization

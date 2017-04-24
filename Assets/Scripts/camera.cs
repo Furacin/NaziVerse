@@ -14,9 +14,8 @@ public class camera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () { 
-		if (player.transform.position.x > 0.2f && !fin) {
-			Debug.Log ("Hola");
-			this.gameObject.transform.position = new Vector3 (player.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+		if (player.transform.position.x > -7f && !fin) {
+			this.gameObject.transform.position = new Vector3 (player.gameObject.transform.position.x + 6.88f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
 		}
 
 		if (player.transform.position.x > 77f) {

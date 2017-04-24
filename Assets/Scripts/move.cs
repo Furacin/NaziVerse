@@ -38,7 +38,7 @@ public class move : MonoBehaviour {
 
 		animator.SetBool("Grounded",grounded);
 		if (Input.GetKey (KeyCode.DownArrow)) { // DUCK
-			animator.Play("duck");
+			UpdateState ("duck");
 		} else if (Input.GetKey (KeyCode.LeftArrow)) { // LEFT
 			//InvokeRepeating ("PlayWalk",0.01f,1f);
 			if (collision_fin) {

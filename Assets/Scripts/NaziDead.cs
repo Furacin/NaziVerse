@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NaziDead : MonoBehaviour {
-	
+
+	//public GameObject gameController;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class NaziDead : MonoBehaviour {
 		if (other.gameObject.tag == "bullet") {
 			Destroy(gameObject);
 			Destroy(other.gameObject);
+			//gameController.SendMessage ("AddDeath");
 		}
 	}
 }

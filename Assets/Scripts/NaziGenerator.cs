@@ -20,7 +20,7 @@ public class NaziGenerator : MonoBehaviour {
 
 	void CreateNazi() {
 		Vector3 position = transform.position;
-		position.x += Random.Range (-5f,5f);
+		position.x += Random.Range (-5f,0f);
 		Instantiate(naziPrefab,position, Quaternion.identity);
 	}
 
@@ -28,6 +28,10 @@ public class NaziGenerator : MonoBehaviour {
 		InvokeRepeating ("CreateNazi",0f,generatorTime);
 	}
 
+	void CancelGenerator()
+	{
+		CancelInvoke ();
+	}
 	void GunShot(Vector3 position) {
 		Instantiate(naziGunPrefab,position,Quaternion.identity);
 	}
