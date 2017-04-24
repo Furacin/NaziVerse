@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class smallWorldController : MonoBehaviour {
 
 	public GameObject character;
+	public bool dialog = false;
 
 	public GameObject dialog1;
 	public GameObject dialog2;
@@ -29,14 +30,44 @@ public class smallWorldController : MonoBehaviour {
 				dialog1.SetActive (true);
 			}*/
 
+			if (!dialog)
+				StartDialog ();
+
 			if (Input.GetKey (KeyCode.E))
 				SceneManager.LoadScene ("level2");
 		}
 	}
+		
 
-	void OnTriggerEnter2D(Collider2D other) {
-		/*if (other.gameObject.tag == "character") {
-			dialog1.SetActive(true);
-		}*/
+	void StartDialog() {
+		dialog = true;
+		Invoke ("showDialog1",1.5f);
+	}
+
+	void showDialog1() {
+		dialog1.SetActive(true);
+		Invoke ("showDialog2",5f);
+	}
+
+	void showDialog2() {
+		dialog1.SetActive(false);
+		dialog2.SetActive(true);
+		Invoke ("showDialog3",5f);
+	}
+
+	void showDialog3() {
+		dialog2.SetActive(false);
+		dialog3.SetActive(true);
+		Invoke ("showDialog4",5f);
+	}
+
+	void showDialog4() {
+		dialog3.SetActive(false);
+		dialog4.SetActive(true);
+		Invoke ("endDialog",5f);
+	}
+
+	void endDialog() {
+		dialog4.SetActive(true);
 	}
 }

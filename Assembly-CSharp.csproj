@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\NaziGunController.cs" />
      <Compile Include="Assets\Scripts\camera.cs" />
      <Compile Include="Assets\Scripts\checkground.cs" />
+     <Compile Include="Assets\Scripts\credits.cs" />
      <Compile Include="Assets\Scripts\move.cs" />
      <Compile Include="Assets\Scripts\smallWorldController.cs" />
  <Reference Include="UnityEngine.UI">
