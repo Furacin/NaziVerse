@@ -7,6 +7,8 @@ public enum Direccion {Izquierda, Derecha};
 
 public class move : MonoBehaviour {
 
+	private string name_scene;
+
 	public GameObject bulletPrefab;
 
 	public float speed = 2.5f;
@@ -28,6 +30,9 @@ public class move : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Scene scene = SceneManager.GetActiveScene();
+		name_scene = scene.name;
+
 		audioPlayer = GetComponent<AudioSource> ();
 		animator = GetComponent<Animator> (); // Obtenemos la componente animator del objeto
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -68,12 +73,14 @@ public class move : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.Space)) { // SHOT
-			audioPlayer.clip = shotClip;
-			audioPlayer.Play();
-			Vector3 position = transform.position;
-			position.y -= 0.4f;
-			position.x += 0.65f;
-			Instantiate(bulletPrefab,position,Quaternion.identity);
+			if (name_scene != "fin_level1") {
+				audioPlayer.clip = shotClip;
+				audioPlayer.Play ();
+				Vector3 position = transform.position;
+				position.y -= 0.4f;
+				position.x += 0.65f;
+				Instantiate (bulletPrefab, position, Quaternion.identity);
+			}
 		}
 
 		/*if (Input.GetKeyUp (KeyCode.RightArrow)) {
