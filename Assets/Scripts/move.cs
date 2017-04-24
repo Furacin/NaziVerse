@@ -21,9 +21,13 @@ public class move : MonoBehaviour {
 
 	private Rigidbody2D rb2d;
 
+	private AudioSource audioPlayer;
+	public AudioClip shotClip;
+	public AudioClip jumpClip;
+
 	// Use this for initialization
 	void Start () {
-		
+		audioPlayer = GetComponent<AudioSource> ();
 		animator = GetComponent<Animator> (); // Obtenemos la componente animator del objeto
 		rb2d = GetComponent<Rigidbody2D> ();
 	}
@@ -53,11 +57,15 @@ public class move : MonoBehaviour {
 		} else
 			UpdateState("idle_gun_character");
 
-		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) { // SALTO
+		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) { // JUMP
+			audioPlayer.clip = jumpClip;
+			audioPlayer.Play();
 			jump = true;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space)) { // SHOT
+			audioPlayer.clip = shotClip;
+			audioPlayer.Play();
 			Vector3 position = transform.position;
 			position.y -= 0.4f;
 			position.x += 0.65f;
