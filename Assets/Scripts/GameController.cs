@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour {
 		}
 
 		if (character != null && gameState == GameState.Playing && character.transform.position.x > 5f) {
+			Debug.Log ("Fin OLEADA");
 			Destroy (naziGenerator);
 		}
 

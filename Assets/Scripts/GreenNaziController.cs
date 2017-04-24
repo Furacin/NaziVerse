@@ -25,7 +25,7 @@ public class GreenNaziController : MonoBehaviour {
 
 	void CreateShot() {
 		Vector3 position = transform.position;
-		position.y += 1.25f;
+		position.y += 1.11f;
 		position.x += -0.5f;
 		Instantiate(naziGunPrefab,position,Quaternion.identity);
 		//

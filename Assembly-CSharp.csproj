@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterDead.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\GameControllerLevel2.cs" />
      <Compile Include="Assets\Scripts\GoLevel1.cs" />
      <Compile Include="Assets\Scripts\GoLevel2.cs" />
      <Compile Include="Assets\Scripts\GreenNaziController.cs" />
