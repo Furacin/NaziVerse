@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CharacterDead : MonoBehaviour {
 
+	private string name_scene;
+
 	// Use this for initialization
 	void Start () {
-		
+		Scene scene = SceneManager.GetActiveScene ();
+		name_scene = scene.name;
 	}
 	
 	// Update is called once per frame
@@ -17,9 +20,13 @@ public class CharacterDead : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "nazibullet") {
-			SceneManager.LoadScene ("RestartLevel1");
-			Destroy(gameObject);
-			Destroy(other.gameObject);
+			if (name_scene == "escena") 
+				SceneManager.LoadScene ("RestartLevel1");
+			else if (name_scene == "level2")
+				SceneManager.LoadScene ("RestartLevel2");
+			
+				Destroy(gameObject);
+				Destroy(other.gameObject);
 		}
 	}
 }
