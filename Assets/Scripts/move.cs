@@ -116,9 +116,9 @@ public class move : MonoBehaviour {
 		if (other.gameObject.tag == "brick2") {
 			//collision_fin = true;
 			//speed = 0;
-			if (name_scene == "escena")
+			if (name_scene == "escena" || name_scene == "fin_level1")
 				Final_Scene1 ();
-			else if (name_scene == "level2")
+			else if (name_scene == "level2" || name_scene == "fin_level2")
 				Final_Scene2 ();
 		}
 	}

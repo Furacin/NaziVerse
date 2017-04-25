@@ -1,17 +1,33 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\move.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NaziController.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NaziGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NaziController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NaziDead.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NaziGunController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GunController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterDead.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\camera.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\move.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NaziGunController.cs" Line="11" Column="17" />
+      <File FileName="Assets\Scripts\smallWorldController.cs" Line="67" Column="24" />
+      <File FileName="Assets\credits.cs" Line="10" Column="3" />
+      <File FileName="Assets\Scripts\move.cs" Line="121" Column="64" />
+      <File FileName="Assets\Scripts\NaziGenerator.cs" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\NaziController.cs" Line="28" Column="20" />
+      <File FileName="Assets\Scripts\GreenNaziController.cs" Line="17" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NaziVerse" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="NaziController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="NaziVerse" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
